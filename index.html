@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechGadget X</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Cabeçalho -->
+    <header>
+        <nav>
+            <div class="container">
+                <h1>TechGadget X</h1>
+                <ul>
+                    <li><a href="#features">Recursos</a></li>
+                    <li><a href="#pricing">Preços</a></li>
+                    <li><a href="#contact">Contato</a></li>
+                </ul>
+            </div>
+        </nav>
+        <div class="hero">
+            <div class="container">
+                <h2>Seja bem-vindo ao futuro da tecnologia!</h2>
+                <p>Descubra o TechGadget X - o gadget que vai transformar sua vida.</p>
+                <a href="#pricing" class="btn">Compre Agora</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Recursos -->
+    <section id="features">
+        <div class="container">
+            <h2>Recursos Principais</h2>
+            <div class="feature">
+                <h3>Design Inovador</h3>
+                <p>O TechGadget X possui um design moderno e elegante, pronto para impressionar.</p>
+            </div>
+            <div class="feature">
+                <h3>Desempenho Superior</h3>
+                <p>Experimente um desempenho excepcional com o processador avançado do TechGadget X.</p>
+            </div>
+            <div class="feature">
+                <h3>Conectividade Total</h3>
+                <p>Permaneça conectado em qualquer lugar com as tecnologias de última geração do TechGadget X.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Preços -->
+    <section id="pricing">
+        <div class="container">
+            <h2>Escolha o seu TechGadget X</h2>
+            <div class="pricing-plans">
+                <div class="plan">
+                    <h3>Modelo Padrão</h3>
+                    <p>A partir de $199</p>
+                    <a href="#contact" class="btn">Compre Agora</a>
+                </div>
+                <div class="plan">
+                    <h3>Modelo Pro</h3>
+                    <p>A partir de $299</p>
+                    <a href="#contact" class="btn">Compre Agora</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+       <!-- Modal para Informações Adicionais -->
+       <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <div id="modalContent"></div>
+        </div>
+    </div>
+
+    <script>
+        function showDetails(model) {
+            var modalContent = document.getElementById('modalContent');
+            var modal = document.getElementById('modal');
+            var content = '';
+
+            if (model === 'standard') {
+                content = '<h3>Detalhes do Modelo Padrão</h3><p>O TechGadget X Modelo Padrão oferece uma ótima experiência com suas características exclusivas.</p>';
+            } else if (model === 'pro') {
+                content = '<h3>Detalhes do Modelo Pro</h3><p>O TechGadget X Modelo Pro é a escolha ideal para usuários avançados que buscam o máximo desempenho.</p>';
+            }
+
+            modalContent.innerHTML = content;
+            modal.style.display = 'block';
+        }
+
+        function closeModal() {
+            var modal = document.getElementById('modal');
+            modal.style.display = 'none';
+        }
+    </script>
+
+    <!-- Contato -->
+    <section id="contact">
+        <div class="container">
+            <h2>Fale Conosco</h2>
+            <p>Entre em contato para mais informações sobre o TechGadget X.</p>
+            <form>
+                <input type="text" placeholder="Seu Nome" required>
+                <input type="email" placeholder="Seu Email" required>
+                <textarea placeholder="Sua Mensagem" required></textarea>
+                <button type="submit" class="btn">Enviar Mensagem</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Rodapé -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 DanTec. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
